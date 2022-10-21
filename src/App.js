@@ -3,8 +3,8 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {Home} from './pages/Home';
 import {About} from './pages/About'
 import {Setting} from './pages/Setting'
-import {PostList} from './pages/ListPost'
-import {OnePost} from './pages/PostOne'
+import {ListPost} from './components/ListPost'
+import {PostOne} from './components/PostOne'
 import {Navbar} from './components/Navbar';
 
 function App() {
@@ -16,8 +16,8 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/setting" element={<Setting />}></Route>
-        <Route path="/list" element={<PostList />}></Route>
-        <Route path="/post/:id" element={<OnePost />}></Route>
+        <Route path="/list" element={<ListPost />}></Route>
+        <Route path="/post/:id" element={<PostOne />}></Route>
       </Routes>
     </div>
     </BrowserRouter>

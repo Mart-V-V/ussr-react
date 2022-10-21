@@ -19,9 +19,6 @@ export const Navbar = () => (
         <li className="nav-item">
           <NavLink className="nav-link" aria-current="page" to="/list">Список</NavLink>
         </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" aria-current="page" to="/post">Запись</NavLink>
-        </li>
       </ul>
     </nav>
 )
