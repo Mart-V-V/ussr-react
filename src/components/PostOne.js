@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Dates from "../myfile.json";
 
 export const PostOne = () => {
@@ -16,7 +16,7 @@ export const PostOne = () => {
         return (
           <div key={item.ID}>
             <h1>{item.post_title}</h1>
-            <p>country: {item.post_content}</p>
+            <p>{item.post_content}</p>
           </div>
         );
       })}
