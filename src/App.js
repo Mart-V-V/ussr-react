@@ -7,6 +7,8 @@ import {ListPost} from './components/ListPost'
 import {PostOne} from './components/PostOne'
 import {Navbar} from './components/Navbar';
 
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -25,21 +27,3 @@ function App() {
 }
 
 export default App;
-
-
-// import React from "react";
-// import Users from "./myfile.json";
-
-// export default function App() {
-
-//   return (
-//     <div className="App">
-//       <h1>Users list</h1>
-//       <ul>
-//       {Users.map(user => (
-//         <li key={user.ID}>{user.ID} - {user.post_title}</li>
-//       ))}
-//       </ul>
-//     </div>
-//   );
-// }
