@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 
@@ -10,19 +10,24 @@ export const Category = () => {
     const response = await fetch("http://ussr-coins.ru/api/category/read.php")
     const data = await response.json()
     setUsers(data.records)
+    // console.log(data);
   }
 
   useEffect(() => {
     fetchData()
   }, [])
 
-
   return (
     <div>
       {users.length > 0 && (
         <ul>
           {users.map(user => (
-            <li key={user.id}>{user.name}<br/>{user.description}</li>
+            <li key={user.id}>
+             <Link to={`/category/${user.id}`}>
+             {user.name}
+             </Link>
+             <br/>{user.description}
+            </li>
           ))}
         </ul>
       )}

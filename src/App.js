@@ -5,6 +5,7 @@ import {About} from './pages/About'
 import {Setting} from './pages/Setting'
 import {PostOne} from './components/PostOne'
 import {Category} from './components/Category'
+import {Categories} from './components/CategoryList'
 import {Navbar} from './components/Navbar';
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/setting" element={<Setting />}></Route>
         <Route path="/post/:id" element={<PostOne />}></Route>
         <Route path="/category" element={<Category />}></Route>
+        <Route path="/category/:id" element={<Categories />}></Route>
       </Routes>
     </div>
     </BrowserRouter>
