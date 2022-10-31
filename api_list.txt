@@ -5,4 +5,4 @@ http://ussr-coins.ru/api/category/read.php - все категории
 
 
 http://ussr-coins.ru/api/product/read_paging.php
-http://ussr-coins.ru/api/product/read_paging.php?page=1 - страницы
+http://ussr-coins.ru/api/product/read_one.php?id=1 - страницы
