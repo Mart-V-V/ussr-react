@@ -8,7 +8,7 @@ export const ListPost = () => {
       <ul>
       {Dates?.map(date => (
         <li key={date.ID}>
-            <Link to={`/post/${date.ID}`}>
+            <Link to={`/react/post/${date.ID}`}>
                 {date.post_title}
             </Link>
             {date.post_content}

@@ -1,10 +1,37 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
+
 
 export const Homes = () => {
-    return (
-        <div className="jumbotron">
-            <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  const [users, setUsers] = useState([])
+  const postId = '1';
+  const apiUrl = 'http://ussr-coins.ru/api/pages/read.php';
+
+  const fetchData = async () => {
+    const response = await fetch(apiUrl)
+    const data = await response.json()
+    setUsers(data.records)
+
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const filtered = users.filter(item => {
+    return item.id === postId;
+  });
+
+  return (
+    <div>
+    {filtered.map(item => {
+      return (
+        <div key={item.id}>
+          <h1>{item.name}</h1>
+          <div className="Container" dangerouslySetInnerHTML={{__html: item.description}}></div>
         </div>
-    )
+      );
+    })}
+    </div>
+  )
 }
