@@ -1,0 +1,8 @@
+http://ussr-coins.ru/api/product/read.php - все записи
+http://ussr-coins.ru/api/pages/read.php - все страницы
+http://ussr-coins.ru/api/product/read_one.php?id=60 - пример одиночной записи
+http://ussr-coins.ru/api/category/read.php - все категории
+
+
+http://ussr-coins.ru/api/product/read_paging.php
+http://ussr-coins.ru/api/product/read_one.php?id=1 - страницы
