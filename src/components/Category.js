@@ -23,7 +23,7 @@ export const Category = () => {
         <ul>
           {users.map(user => (
             <li key={user.id}>
-             <Link to={`/category/${user.id}`}>
+             <Link to={`/react/category/${user.id}`}>
              {user.name}
              </Link>
              <br/>{user.description}

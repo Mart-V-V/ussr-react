@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 
-
 export const PostOne = () => {
   const [users, setUsers] = useState([])
   const postId = useParams().id;
@@ -16,7 +15,7 @@ export const PostOne = () => {
   useEffect(() => {
     fetchData()
   }, [])
-
+  
 
   return (
     <div>

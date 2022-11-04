@@ -4,7 +4,11 @@ import { useParams } from 'react-router-dom';
 
 export const PageOne = () => {
   const [users, setUsers] = useState([])
-  const postId = useParams().id;
+  let postId = useParams().id;
+  if(!postId){
+    postId ='1';
+  }
+
   const apiUrl = 'http://ussr-coins.ru/api/pages/read.php';
 
   const fetchData = async () => {
