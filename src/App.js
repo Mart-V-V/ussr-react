@@ -4,7 +4,9 @@ import {Home} from './pages/Home';
 import {About} from './pages/About'
 import {Setting} from './pages/Setting'
 import {ListPost} from './components/ListPost'
+import {Category} from './components/Category'
 import {PostOne} from './components/PostOne'
+import {Pages} from './components/Pages'
 import {Navbar} from './components/Navbar';
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/setting" element={<Setting />}></Route>
         <Route path="/list" element={<ListPost />}></Route>
+        <Route path="/category" element={<Category />}></Route>
+        <Route path="/pages" element={<Pages />}></Route>
         <Route path="/post/:id" element={<PostOne />}></Route>
       </Routes>
     </div>
