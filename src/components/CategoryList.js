@@ -4,12 +4,11 @@ import { useEffect, useState } from "react";
 
 
 export const Categories = () => {
-  const [users, setUsers] = useState([])
+  const [datas, setdatas] = useState([])
 
   const fetchData = async () => {
-    const response = await fetch("http://ussr-coins.ru/api/product/read.php")
+    const response = await fetch("http://cms/apics/api-category.php")
     const data = await response.json()
-    setUsers(data.records)
   }
 
   useEffect(() => {
@@ -19,14 +18,14 @@ export const Categories = () => {
 
   return (
     <div>
-      {users.length > 0 && (
+      {datas.length > 0 && (
         <ul>
-          {users.map(user => (
-            <li key={user.id}>
-             <Link to={`/react/post/${user.id}`}>
-             {user.name}
+          {datas.map(data => (
+            <li key={data.id}>
+             <Link to={`/react/post/${data.id}`}>
+             {data.name}
              </Link>
-             <br/>{user.description}
+             <br/>{data.description}
             </li>
           ))}
         </ul>
