@@ -7,7 +7,7 @@ export const Categories = () => {
   const [users, setUsers] = useState([])
 
   const fetchData = async () => {
-    const response = await fetch("http://ussr-coins.ru/api/product/read.php")
+    const response = await fetch("http://cms/apics/api-category.php")
     const data = await response.json()
     setUsers(data.records)
   }

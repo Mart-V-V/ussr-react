@@ -1,5 +1,5 @@
 import React from "react";
-import Dates from "../myfile.json";
+import Dates from "http://cms/apics/api-posts.php";
 import { Link } from "react-router-dom";
 
 
