@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React from "react";
+import Dates from "http://cms/apics/api-posts.php";
+import { Link } from "react-router-dom";
+>>>>>>> 0ff1bf4d7394ce6f3ecf038c6c1af40d60a8b774
+
 
 export const ListPost = () => {
   const [posts, setPosts] = useState([]);
@@ -16,6 +23,7 @@ export const ListPost = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div>
       <h1>Posts List</h1>
       {selectedPost ? (
@@ -36,3 +44,17 @@ export const ListPost = () => {
     </div>
   );
 };
+=======
+      <ul>
+      {Dates?.map(date => (
+        <li key={date.ID}>
+            <Link to={`/react/post/${date.ID}`}>
+                {date.post_title}
+            </Link>
+            {date.post_content}
+        </li>
+      ))}
+      </ul>
+  );
+}
+>>>>>>> 0ff1bf4d7394ce6f3ecf038c6c1af40d60a8b774
